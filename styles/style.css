@@ -1,18 +1,16 @@
 .header {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  width: 100%;
-  max-width: 1440px;
-  margin: 92px 49px 95px 51px;
-  font-size: 18px;
+  height: 293px;
+  padding: 92px 49px 92px 51px;
+  display: grid;
+  grid-template-columns: 1fr 0fr 1fr;
 }
 
 .header__menu {
   flex-grow: 0.5;
-  color: #000;
+  color: black;
   font-weight: 400;
   line-height: normal;
+  font-size: 18px;
 }
 
 .header__links-list {
@@ -62,15 +60,21 @@
   font-style: normal;
   line-height: 24.5px;
   text-underline-offset: 5px;
+  justify-self: end;
 }
 
 .header_address {
   line-height: 24.3px;
-  margin-right: 100px;
 }
 
 .header__paragraph {
   max-width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cover {
@@ -160,12 +164,11 @@
   background: transparent;
 }
 
-.lotos {
+.lots {
   align-self: center;
   width: 100%;
   max-width: 1340px;
   margin-top: 180px;
-  margin-left: 50px;
 }
 
 .lots__heading {
@@ -180,14 +183,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
   gap: 25px;
-  margin-top: 10px;
   list-style: none;
 }
 
 .lots__card-list-item {
   display: flex;
   flex-grow: 1;
+  width: 430px;
+  min-height: 450px;
 }
 
 .card-link {
@@ -212,8 +217,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 430px;
-  min-height: 450px;
+  align-items: center;
   padding: 50px 40px;
   color: white;
   background-size: cover;
@@ -249,7 +253,6 @@
   width: 100%;
   max-width: 1340px;
   margin-top: 180px;
-  margin-left: 50px;
 }
 
 .about__column {
@@ -284,26 +287,27 @@
 }
 
 .about__text {
-  margin-top: 26px;
+  margin-top: 25px;
   font-size: 20px;
   line-height: normal;
 }
 
-.first-of-type {
-  margin-top: 0px;
+.about__text:first-of-type {
+  margin-top: 0;
 }
 
 .footer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-self: center;
+  justify-content: center;
+  max-width: 1440px;
   width: 100%;
-  max-width: 1340px;
-  margin: 180px 50px 90px 50px;
+  padding: 0 50px 0 50px;
+  margin: 180px 0 90px 0;
   font-size: 18px;
 }
 
-.footer__address {
+.footer_address {
   margin-right: auto;
   line-height: 24.3px;
 }
@@ -320,6 +324,7 @@
 .footer__social-list {
   display: grid;
   grid-template-columns: 96px 94px 49px;
+  margin-left: auto;
 }
 
 .footer__social-list-item {
